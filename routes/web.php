@@ -11,6 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/mgma', 'Mgma\MgmaController@index');
+Route::get('/mgma/alluser', 'Mgma\MgmaController@userList')->name('alluser');
+Route::get('/mgma/create', 'Mgma\MgmaController@create')->name('create');
+Route::post('/mgma/store', 'Mgma\MgmaController@store');
+Route::get('/mgma/user/edit/{id}', 'Mgma\MgmaController@edit');
+Route::get('/mgma/user/edit/{id}', 'Mgma\MgmaController@update');
+
+Route::get('/factory', 'Factory\FactoryController@index');
+
+// Route::get('/login', 'Auth\LoginController@login');
+
+// Auth::routes(['register' => false]);
+
+// Route::group(['middleware' => ['Auth']], function () {
+//     Route::get('/login', 'LoginController@login');
+// });
