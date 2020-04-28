@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/mgma', 'Mgma\MgmaController@index');
 Route::get('/mgma/alluser', 'Mgma\MgmaController@userList')->name('alluser');
 Route::get('/mgma/create', 'Mgma\MgmaController@create')->name('create');
-Route::post('/mgma/store', 'Mgma\MgmaController@store');
+Route::post('/mgma/store', 'Mgma\MgmaController@store')->name('store');
 Route::get('/mgma/user/edit/{id}', 'Mgma\MgmaController@edit');
 Route::get('/mgma/user/edit/{id}', 'Mgma\MgmaController@update');
 

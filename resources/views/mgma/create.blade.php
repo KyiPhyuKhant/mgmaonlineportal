@@ -13,7 +13,7 @@
                             <div class="card-header">
                                 <h3 class="card-title"><span class="mandatory">*</span> Fields are required.</h3>
                             </div>
-                            <form method="POST" action="{{ route('mgma.store') }}" id="form-horizontal">
+                            <form method="POST" action="{{ route('store') }}" id="form-horizontal">
                                 @csrf
                                 <div class="card-body">
                                     <div class="form-group row">
